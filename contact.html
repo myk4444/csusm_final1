@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miyuki Boulware | Contact</title>
+    <link rel="stylesheet" href="scss/main.css">
+	  <link href="../css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+	  
+<meta name="ad.size" content="width=300,height=600">
+	<meta name="authoring-tool" content="Adobe_Animate_CC">
+<!-- write your code here -->
+<style>
+  #animation_container {
+	position:relative;
+	margin:auto;
+	left:0;right:0;
+	top:10px;
+	bottom:0;
+  }
+</style>
+<script src="libs/1.0.0/createjs.min.js"></script>
+<script src="Logo-Anime.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("189D906E22D74F018055DE6DA57A86CE");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.LogoAnime();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+  </head>
+
+<body onload="init();" style="margin:0px;">
+	  
+    <nav class="navbar navbar-default"> <!-- deleted "navvar-fixed-top" and changed "inverse" to defaut -->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Miyuki Boulware</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="http://linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+            <li class="cart"><a href="#"><i class="fa fa-shopping-cart"><span></span></i></a></li>  
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<!-- tile-bar start -->
+    <div class="title-bar">
+      <div class="container">
+        <h1>Contact</h1>
+      </div>
+    </div> <!-- title-bar end -->
+<!--Anime Start-->
+		<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:640px; height:480px">
+		<canvas id="canvas" width="640" height="480" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:640px; height:480px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>	
+		<!--Anime End-->
+<!-- main start -->    
+ <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">Get In Touch</h4>
+            </div>
+            <div class="panel-body">
+              <!-- form start -->    
+       	
+              <form>
+				  <div class="form-group">
+                    <label>What is your name?</label>
+                    <input type="text" class="form-control" placeholder="Enter Name">
+                  </div>
+                  <div class="form-group">
+                    <label>What is your email?</label>
+                    <input type="text" class="form-control" placeholder="Enter Email">
+                  </div>
+				  
+				  <fieldset class="form-group">
+                  <div class="row">
+                    <div class="col-sm-8">
+                     <label>Have you visited my website before?</label><br>
+						<label class="radio-inline"><input type="radio" name="optradio" checked>Yes</label>
+						<label class="radio-inline"><input type="radio" name="optradio">No</label>
+<!--
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="skillsRadio" id="novice" value="option1" checked>
+                        <label class="form-check-label" for="novice">
+                          Novice
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="skillsRadio" id="intermediate" value="option2">
+                        <label class="form-check-label" for="intermediate">
+                          Intermediate
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="skillsRadio" id="advanced" value="option3">
+                        <label class="form-check-label" for="advanced">
+                          Advanced
+                        </label>
+                      </div>
+-->
+                    </div>
+                  </div>
+                </fieldset>
+				  
+                  <div class="form-group">
+                    <label>Any additional comments?</label>
+                    <textarea class="form-control" placeholder="Enter Message"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+				  
+              </form> <!-- form end -->
+              </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="list-group">
+              <a href="#" class="list-group-item active">Links</a>
+			  <a href="https://www.japan.travel/en/destinations/okinawa/okinawa/" class="list-group-item" target="_blank">Travel To Okinawa</a>
+			  <a href="https://www.allaboutsushiguide.com/types-of-sushi.html" class="list-group-item" target="_blank">All About Sushi</a>
+			  <a href="https://www.matsuhisarestaurants.com/how-to-use-chopsticks/" class="list-group-item" target="_blank">How To Use Chopsticks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- main end -->    
+
+<!--- section c start -->    
+    <div class="section-c">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2"> <!-- 8 columns whide but added offset-2 will push it to the middle -->
+			  
+            <h2>Subscribe To My Newsletter</h2>
+            <br />
+              <p>Please subscribe to my newsletter for more updates</p>
+
+            <hr />
+            <form>
+              <input type="text" class="form-control input-lg" placeholder="Enter Email">
+              <br />
+              <button class="btn btn-primary btn-lg btn-block">Submit</button>
+            </form>
+          </div>
+			
+        </div>
+      </div>
+		
+		
+    </div> <!-- section c end -->
+
+<!--- footer start -->    
+    <footer>
+      <div class="container">
+          <p>Copyright &copy; 2021 Miyuki Boulware</p>
+      </div>
+    </footer> <!-- footer end -->
+
+<!--- jquery and javascript -->    
+	<script src="js/Logo-Anime.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+	<script src="https://kit.fontawesome.com/5f5e33f4bc.js" crossorigin="anonymous"></script> 
+	  	  <script src="js/main.js"></script>
+
+  </body>
+</html>

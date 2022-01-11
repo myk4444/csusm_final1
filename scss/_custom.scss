@@ -1,0 +1,121 @@
+.navbar {
+	margin-bottom: 0;
+	a {
+		color: set-text-color($main-color) !important;
+	}
+
+	.fa {
+		font-size: 18px;
+	}
+}
+
+.showcase {
+	background: url(../img/walk-beach3.jpg) no-repeat 0 -150px;
+	//adjust
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: auto;
+
+	height: 600px;
+	padding: 30px 0;
+
+	h1 {
+		font-size: 60px;
+	}
+
+	.container {
+		background: #ffffff;
+		opacity: 0.8;
+		padding: 20px 30px 30px 30px;
+	}
+}
+
+.section-a {
+	padding: 30px 0;
+	text-align: center;
+	background: $main-color;
+	//background: If it's light and then text color will be black, if dark the text color will be white
+	color: set-text-color($main-color); //text will be dynamic
+
+	.fa {
+		font-size: $icon-size;
+	}
+}
+
+.section-b {
+	background: #e6ebf1;
+	padding: 30px 0;
+	img {
+		width: 100%;
+	}
+}
+
+.panel-heading h4 {
+	color: set-text-color($main-color); //text will be dynamic
+}
+
+.section-c {
+	padding: 60px;
+	text-align: center;
+	background: $main-color;
+	color: set-text-color($main-color); //text will be dynamic
+
+	.btn-primary {
+		background: darken($main-color, 10%);
+	}
+}
+
+.title-bar {
+	background: url(../img/walk-beach3.jpg) no-repeat 0 -350px;
+	padding-bottom: 10px;
+	border-bottom: 4px solid $main-color;
+}
+
+.main {
+	margin-top: 30px;
+}
+
+//this is for class
+//caption {
+//	caption-side: top;
+//}
+
+//.inventory {
+//	font-family: "trevuch MS", Arial, Helvetica, sands-seric;
+//
+//	td, th {
+//		font-side: 1.1em;
+//		border: 1px solid #f5b857;
+//		padding: 3px 7px 2px 7px;
+//	}
+//th {
+//	text-transform: uppercase;
+//}
+//}
+thead {
+	text-transform: uppercase;
+	background: $main-color;
+	color: #fff;
+}
+
+.fa-star {
+	color: #e94d00;
+	font-size: 0.7em;
+	letter-spacing: 3px;
+}
+
+legend {
+	font-size: 15px;
+	margin-left: 15px;
+	border-bottom: none;
+	font-weight: bold;
+}
+
+footer {
+	padding: 30px 0;
+	background: darken($main-color, 10%);
+	color: set-text-color($main-color); //text will be dynamic
+	text-align: center;
+}

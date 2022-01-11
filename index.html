@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miyuki Boulware | Final Project</title>
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/landing.css">
+  </head>
+
+  <body>
+	  
+    <nav class="navbar navbar-default"> <!-- deleted "navvar-fixed-top" and changed "inverse" to defaut -->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Miyuki Boulware</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="http://linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+            <li class="cart"><a href="#"><i class="fa fa-shopping-cart"><span></span></i></a></li>  
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<!-- showcase start -->
+    <div class="showcase">
+      <div class="container">
+        <h1 class="anime-header">My Story</h1>
+        <p class="lead" id="anime-content">Hello. I’m Miyuki. I was born and raised in Japan. I grew up in a beautiful tropical island call Ishigaki Island. It's known for beaches and sites for snorkeling, diving and surfing...</p>
+        <a href="blog.html" class="btn btn-primary" id="btn">Read More</a>
+      </div>
+    </div> <!-- showcase end -->
+
+<!-- sections a start -->
+    <div class="section-a">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"> <!-- 3 div is 4 columns each -->
+            <a href="https://www.japan-guide.com/e/e7201.html" target="_blank"><i class="fa fa-moon"></i></a>
+            <h3>Ishigaki Island</h3>
+            <p>Ishigaki Island has both sandy beaches and rocky beaches which are covered in small pieces of bleached coral.</p>
+          </div>
+          <div class="col-md-4">
+            <a href="blog.html" target="_blank"><i class="fa fa-moon"></i></a>
+            <h3>My Childhood</h3>
+            <p>I grew up in a beautiful tropical island call Ishigaki Island. It's known for beaches and sites for snorkeling, diving and surfing.</p>
+          </div>
+          <div class="col-md-4">
+            <a href="http://www.slate.com/blogs/atlas_obscura/2015/03/05/the_star_shaped_sand_of_okinawa.html" target="_blank"><i class="fa fa-moon"></i></a>
+            <h3>Star Shaped Sands&nbsp;</h3>
+            <p>Thinking about grains of sand as stars in the sky is a common way of trying to visualize the enormity of the universe.</p>
+          </div>
+        </div>
+      </div>
+    </div> <!-- section a end -->
+
+  <!-- section b start -->   
+    <div class="section-b">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"><!-- 2 div is 6 columns -->
+            <!-- Modified: Collapse - Accordion example code from getbootstrap.com section JavaScript -->
+            
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Travel To Okinawa
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    Okinawa is a Japanese prefecture comprising more than 150 islands in the East China Sea between Taiwan and Japan's mainland.
+                    It's known for its tropical climate, broad beaches and coral reefs, as well as World War II sites.
+                    On the largest island (also named Okinawa) is Okinawa Prefectural Peace Memorial Museum, commemorating a massive 1945 Allied invasion, and Churaumi Aquarium, home to whale sharks and manta rays. Read more <a href="https://www.japan.travel/en/destinations/okinawa/okinawa/"><i class="fa fa-star" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      All About Sushi
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    Learn everything you ever wanted to know about all the different Types of Sushi...
+                    (but were afraid to ask!) Read more <a href="https://www.allaboutsushiguide.com/types-of-sushi.html"><i class="fa fa-star" aria-hidden="true"></i></a></div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      How To Use Chopsticks                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    Learning how to use chopsticks properly is a rite of passage in the world of sushi. Sushi restaurants in Denver provide you with all the tools you need to learn, but it will still take some practice to get it down just right. Here is a step-by-step guide to get you started so you can practice on your own. Read more <a href="https://www.matsuhisarestaurants.com/how-to-use-chopsticks/"><i class="fa fa-star" aria-hidden="true"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="img/ishigaki-island-stalactite-cave.jpg" alt="Ishigaki Island Stalactite Cave">
+          </div>
+        </div>
+      </div>
+    </div> <!-- section b end -->
+
+<!--- section c start -->    
+    <div class="section-c">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2"> <!-- 8 columns whide but added offset-2 will push it to the middle -->
+            <h2>Subscribe To My Newsletter</h2>
+            <br />
+              <p>Please subscribe to my newsletter for more updates</p>
+
+            <hr />
+            <form>
+              <input type="text" class="form-control input-lg" placeholder="Enter Email">
+              <br />
+              <button class="btn btn-primary btn-lg btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> <!-- section c end -->
+
+<!--- footer start -->    
+    <footer>
+      <div class="container">
+          <p>Copyright &copy; 2021 Miyuki Boulware</p>
+      </div>
+    </footer> <!-- footer end -->
+
+<!--- jquery and javascript -->    
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+  <script src="https://kit.fontawesome.com/5f5e33f4bc.js" crossorigin="anonymous"></script>	  
+	  	  <script src="js/main.js"></script>
+
+  </body>
+</html>
